@@ -1,0 +1,6 @@
+#!/bin/bash
+source helper
+
+#put your application in "app" directory
+
+docker build --pull $@ -t ${IMAGE} . 

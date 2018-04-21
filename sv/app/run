@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source /etc/envvars
+
+cd /app
+
+exec 2>&1
+exec npm start 
