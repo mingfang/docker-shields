@@ -1,0 +1,17 @@
+namespaces:
+  {{namespace}}:
+    services:
+    - name: shields
+      ports:
+      - {name: http, port: 8080}
+      annotations:
+        nginx:
+        - http:
+          - server: shields.{{namespace}}.*
+            paths:
+            - path: /
+      pod:
+        containers:
+        - name: shields
+          image: registry.rebelsoft.com/shields:latest
+
